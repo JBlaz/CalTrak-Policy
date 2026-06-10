@@ -3,111 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caltrak – Privacy Policy</title>
+  <title>CalTrak - Privacy Policy</title>
   <style>
+    :root { color-scheme: light dark; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       max-width: 760px;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 2rem 1.5rem 4rem;
       color: #222;
+      background: #fff;
       line-height: 1.7;
     }
-    h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e6e6e6; background: #121212; }
+      h2 { color: #f5f5f5; }
+      a { color: #8ab4f8; }
+      hr { border-top-color: #333; }
+    }
+    h1 { font-size: 1.9rem; margin-bottom: 0.25rem; }
     h2 { font-size: 1.15rem; margin-top: 2rem; color: #111; }
     p, li { font-size: 0.97rem; }
     ul { padding-left: 1.4rem; }
     .updated { color: #666; font-size: 0.88rem; margin-bottom: 2rem; }
     a { color: #0066cc; }
     hr { border: none; border-top: 1px solid #e0e0e0; margin: 2.5rem 0; }
+    .footer { margin-top: 3rem; font-size: 0.85rem; color: #666; }
   </style>
 </head>
 <body>
 
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 25 May 2026 &nbsp;·&nbsp; App: <strong>Caltrak</strong> &nbsp;·&nbsp; <a href="/support.html">Support</a></p>
+  <h1>CalTrak Privacy Policy</h1>
+  <p class="updated">Effective date: June 9, 2026 &nbsp;|&nbsp; <a href="/support.html">Support</a></p>
 
   <p>
-    Caltrak is a personal calorie and nutrition tracking app developed by Blaz Apps.
-    This policy explains what data the app collects, how it is used, and your rights
-    regarding that data.
+    CalTrak is a calorie, nutrition, hydration, and weight tracking app developed by Blaz Apps.
+    CalTrak is local-first: your food log, custom foods, saved meals, profile, goals, reminders,
+    Health data, and preferences stay on your device unless you choose to connect a service,
+    sign in, search online food databases, export data, or use an AI feature.
   </p>
 
-  <h2>1. Data We Collect</h2>
-  <p>Caltrak collects only the information you enter directly into the app:</p>
+  <h2>1. Optional Subscription, Account, and Backend</h2>
+  <p>
+    If CalTrak offers paid subscriptions, purchases and restores are handled by the App Store or
+    Google Play. Restoring a subscription does not require a CalTrak account. The app may store a
+    local subscription status snapshot so paid in-app features remain available on that device.
+  </p>
+  <p>
+    You can use CalTrak without signing in where local and direct-provider features are available.
+    If you choose to create a CalTrak account, authentication is handled by AWS Cognito. You may
+    sign in with email/password or, when available, with Google or Apple through Cognito Hosted UI.
+    CalTrak does not receive your password. The app stores backend access and refresh tokens in the
+    platform secure store.
+  </p>
+  <p>
+    Signed-in requests to the CalTrak backend may be used for backend-powered food lookup,
+    hosted AI parsing, quotas, entitlement checks, abuse prevention, and user-scoped AI parse
+    caching. Hosted AI requires both a signed-in CalTrak account and an active App Store or
+    Google Play subscription.
+  </p>
+
+  <h2>2. Data Stored On Your Device</h2>
+  <p>CalTrak stores the following data locally on your device:</p>
   <ul>
-    <li>Food and meal logs (name, portion, calories, macronutrients)</li>
-    <li>Daily nutrition goals and preferences you configure</li>
-    <li>Any notes or custom entries you create</li>
+    <li>Food logs, water logs, custom foods, saved meals, portions, calories, and nutrients.</li>
+    <li>Body profile and goals, including sex, age, height, weight, activity level, and targets.</li>
+    <li>Weight entries, reminders, app appearance, units, AI settings, and preferences.</li>
+    <li>Bring-your-own-key AI API keys, stored using Android Keystore or iOS Keychain.</li>
+    <li>A local subscription entitlement snapshot after purchase or restore.</li>
   </ul>
-  <p>We do <strong>not</strong> collect your name, email address, location, device
-  identifiers, or any other personal information.</p>
-
-  <h2>2. How Your Data Is Stored</h2>
   <p>
-    All data is stored <strong>locally on your device only</strong>. Caltrak does not
-    operate any servers and does not transmit your data to us or any third party
-    automatically.
+    Uninstalling the app deletes the app's local data from that device. Some data may also exist in
+    Apple Health or Health Connect if you chose to sync it there.
   </p>
 
-  <h2>3. Third-Party App Integration</h2>
+  <h2>3. Health Connect and Apple Health</h2>
   <p>
-    Caltrak may allow you to connect to third-party health or fitness platforms
-    (for example, Google Fit or similar services) to sync your nutrition data.
-    This integration is <strong>entirely optional and initiated by you</strong>.
-    When you choose to sync:
+    If you connect Health Connect on Android or Apple Health on iOS, CalTrak reads and writes the
+    following record types with your permission: Nutrition, Hydration, and Weight. This data is
+    exchanged only between the app and the health service on your device. CalTrak does not transmit
+    Health Connect or Apple Health data to the CalTrak backend.
   </p>
+  <p>
+    CalTrak uses health data only to provide the in-app tracking and sync features you request.
+    We do not sell health data, use it for advertising, or share it with third parties. You can
+    revoke access at any time in CalTrak settings or in the system health app.
+  </p>
+
+  <h2>4. AI Features</h2>
+  <p>
+    CalTrak's optional AI features can parse a meal from text or a photo only after you choose to
+    send that content. Health Connect and Apple Health data are not included in AI requests.
+  </p>
+  <p>
+    If you are signed in and use CalTrak-hosted AI, the text or image you submit is sent to the
+    CalTrak backend, which forwards it to the configured AI provider and may cache the structured
+    parse result for your account to reduce repeated AI cost and support quotas.
+  </p>
+  <p>
+    If you use the bring-your-own-key path, the text or image you submit is sent directly from your
+    device to the provider you selected, using your own API key. Your BYOK API key is stored only
+    on your device and is never sent to the CalTrak backend.
+  </p>
+
+  <h2>5. Food Database Lookups and Barcode Scanning</h2>
+  <p>
+    When you search for food or scan a barcode, the search term or barcode number may be sent to the
+    CalTrak backend, USDA FoodData Central, and/or Open Food Facts to retrieve product and nutrition
+    information. If you are signed in and using the backend, CalTrak may cache public food lookup
+    results globally; these cache rows are not scoped to your account.
+  </p>
+  <p>
+    The camera is used for on-device barcode scanning. Camera frames for barcode scanning are
+    processed on your device and are not stored or transmitted by CalTrak.
+  </p>
+
+  <h2>6. Notifications and Reminder Replies</h2>
+  <p>
+    CalTrak can schedule local meal-reminder notifications on your device. These reminders are
+    generated locally. If you reply to a reminder and have enabled AI parsing, the reply text is
+    processed as described in the AI section above. If AI parsing is unavailable or times out, the
+    app may save your reply text locally as a quick-add note so the entry is not lost.
+  </p>
+
+  <h2>7. CSV Export and Sharing</h2>
+  <p>
+    CalTrak can export recent diary data to a CSV file when you choose to share or save it. The
+    exported file may include food names, portions, nutrients, meal types, and times from your log.
+    The file is created only after you start the export, and sharing is handled by the system share
+    sheet and the destination you choose.
+  </p>
+
+  <h2>8. Permissions Summary</h2>
   <ul>
-    <li>Data is sent directly to the third-party service under their own privacy policy.</li>
-    <li>Blaz Apps does not receive, store, or have access to data shared with those services.</li>
-    <li>You can disconnect the integration at any time from within the app or your device settings.</li>
+    <li><strong>Camera</strong> &mdash; barcode scanning.</li>
+    <li><strong>Notifications</strong> &mdash; meal reminders and reply confirmations.</li>
+    <li><strong>Health Connect / Apple Health</strong> &mdash; Nutrition, Hydration, and Weight sync.</li>
+    <li><strong>Internet</strong> &mdash; optional account auth, backend requests, food lookups, subscriptions, and AI parsing.</li>
+    <li><strong>Run at startup</strong> &mdash; re-arm meal reminders after device restart.</li>
   </ul>
 
-  <h2>4. Crash Reporting &amp; Analytics</h2>
+  <h2>9. Analytics, Advertising, and Data Sharing</h2>
   <p>
-    Caltrak does not currently use any crash reporting or analytics services.
-    If this changes in a future update, this policy will be updated before the
-    release, and the policy will clearly describe what is collected and by whom.
+    CalTrak does not contain advertising SDKs and does not sell your data. We do not use your data
+    for third-party advertising or tracking. Data is shared only for the user-initiated features
+    described above, such as authentication, purchases/restores through the app stores, food lookups,
+    Health sync, AI parsing, and exports you choose to share.
   </p>
 
-  <h2>5. Data Sharing</h2>
+  <h2>10. Data Retention and Deletion</h2>
   <p>
-    We do not sell, rent, or share your data with any third party for advertising,
-    marketing, or any other commercial purpose.
+    Local data remains on your device until you delete it in the app, clear app data, or uninstall
+    the app. Health Connect and Apple Health data are managed by you in the system health app.
+    Backend AI parse cache rows expire automatically. For backend account data deletion requests,
+    contact the address below.
   </p>
 
-  <h2>6. Data Deletion</h2>
+  <h2>11. Children's Privacy</h2>
   <p>
-    Because all data is stored on your device, you can delete it at any time by
-    clearing the app's data from your device settings or by uninstalling the app.
-    No data remains on any server after uninstallation.
+    CalTrak is not directed to children under 13 or the equivalent minimum age in your jurisdiction,
+    and we do not knowingly collect data from children.
   </p>
 
-  <h2>7. Children's Privacy</h2>
+  <h2>12. Changes to This Policy</h2>
   <p>
-    Caltrak is not directed at children under 13. We do not knowingly collect any
-    information from children. If you believe a child has entered personal data into
-    the app, you can remove it by clearing the app's data on their device.
-  </p>
-
-  <h2>8. Changes to This Policy</h2>
-  <p>
-    We may update this policy from time to time. When we do, the "Last updated" date
-    at the top of this page will change. We encourage you to review this page
-    periodically.
+    We may update this policy from time to time. When we do, the effective date at the top of this
+    page will change. Material changes will be reflected on this page.
   </p>
 
   <hr />
 
   <h2>Contact</h2>
   <p>
-    If you have any questions or concerns about this privacy policy, please contact us at:<br />
-    <a href="mailto:support@blazapps.com">support@blazapps.com</a>
+    Privacy questions and account data deletion requests:
+    <a href="mailto:privacy@blazapps.com">privacy@blazapps.com</a>
   </p>
   <p>
-    For app help, bug reports, and feature requests, see the
-    <a href="/support.html">Support page</a>.
+    App help, bug reports, and feature requests:
+    <a href="mailto:support@blazapps.com">support@blazapps.com</a>
   </p>
+
+  <p class="footer">&copy; 2026 Blaz Apps. CalTrak.</p>
 
 </body>
 </html>

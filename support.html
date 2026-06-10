@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caltrak – Support</title>
+  <title>CalTrak - Support</title>
   <style>
+    :root { color-scheme: light dark; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       max-width: 760px;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 2rem 1.5rem 4rem;
       color: #222;
+      background: #fff;
       line-height: 1.7;
     }
-    h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e6e6e6; background: #121212; }
+      h2, h3 { color: #f5f5f5; }
+      a { color: #8ab4f8; }
+      hr { border-top-color: #333; }
+    }
+    h1 { font-size: 1.9rem; margin-bottom: 0.25rem; }
     h2 { font-size: 1.15rem; margin-top: 2rem; color: #111; }
     h3 { font-size: 1.02rem; margin-top: 1.5rem; color: #111; }
     p, li { font-size: 0.97rem; }
@@ -21,74 +29,97 @@
     .updated { color: #666; font-size: 0.88rem; margin-bottom: 2rem; }
     a { color: #0066cc; }
     hr { border: none; border-top: 1px solid #e0e0e0; margin: 2.5rem 0; }
-    .footer { font-size: 0.85rem; color: #666; margin-top: 2rem; }
+    .footer { margin-top: 3rem; font-size: 0.85rem; color: #666; }
   </style>
 </head>
 <body>
 
-  <h1>Support</h1>
-  <p class="updated">Caltrak — food &amp; nutrition tracking &nbsp;·&nbsp; <a href="/">Privacy Policy</a></p>
+  <h1>CalTrak Support</h1>
+  <p class="updated">Food, nutrition, hydration, and weight tracking &nbsp;|&nbsp; <a href="/">Privacy Policy</a></p>
 
   <p>
-    Caltrak is a free, on-device food and nutrition diary. There is no account, no signup,
-    and no server-side backend — so support is direct from us.
+    Need help with CalTrak? Email us and include your platform, app version, device model, and a
+    short description of what happened. Please do not send private health data, full meal photos,
+    API keys, passwords, or store receipts unless we specifically ask for a redacted screenshot.
   </p>
 
   <h2>Contact</h2>
   <p>
-    Email <a href="mailto:support@blazapps.com">support@blazapps.com</a> for any of the following:
+    Email <a href="mailto:support@blazapps.com">support@blazapps.com</a> for:
   </p>
   <ul>
-    <li>Bug reports — please include your iOS or Android version, the device model, and a short description of what happened.</li>
-    <li>Feature requests.</li>
-    <li>Apple Health or Google Health Connect sync issues.</li>
-    <li>Questions about the AI features (bring-your-own-key for OpenAI, Anthropic, or Google AI).</li>
-    <li>Anything else.</li>
+    <li>Bug reports and crash details.</li>
+    <li>Feature requests and product feedback.</li>
+    <li>Apple Health or Google Health Connect sync questions.</li>
+    <li>Account, Google sign-in, Apple sign-in, or email sign-in problems.</li>
+    <li>Subscription purchase or restore questions.</li>
+    <li>Hosted AI or bring-your-own-key AI questions.</li>
+    <li>CSV export issues.</li>
   </ul>
-  <p>
-    We aim to reply within a few business days.
-  </p>
+  <p>We aim to reply within a few business days.</p>
 
-  <h2>Common questions</h2>
+  <h2>Common Questions</h2>
 
   <h3>Do I need an account?</h3>
   <p>
-    No. Caltrak does not require an account, signup, or login. Every log entry stays on your device.
+    No. CalTrak is local-first and can be used without a CalTrak account where local and
+    direct-provider features are available. A CalTrak account is needed for backend-powered food
+    lookup and hosted AI. Hosted AI also requires an active App Store or Google Play subscription.
+  </p>
+
+  <h3>Does restoring a subscription require a CalTrak account?</h3>
+  <p>
+    No. Purchases and restores are handled by the App Store or Google Play account on your device.
+    Hosted AI still requires CalTrak sign-in because the backend needs an authenticated account for
+    quotas, entitlement checks, and abuse prevention.
   </p>
 
   <h3>How do I delete my data?</h3>
   <p>
-    All data is local. Uninstalling the app removes everything. Within the app you can also
-    delete individual entries (swipe a row), and you can disconnect from Apple Health
-    or Google Health Connect at any time from Settings → Integrations.
+    You can delete individual food entries in the app. You can remove local app data by clearing
+    app data or uninstalling CalTrak. Health Connect and Apple Health records are managed in the
+    system health app. For backend account data deletion requests, email
+    <a href="mailto:privacy@blazapps.com">privacy@blazapps.com</a>.
   </p>
 
-  <h3>Do the AI features cost extra?</h3>
+  <h3>How do AI features work?</h3>
   <p>
-    Caltrak does not charge for AI features and does not operate any servers. You provide
-    your own API key from OpenAI, Anthropic, or Google AI Studio under
-    Settings → AI Assistant, and your usage is billed by that provider directly.
+    CalTrak supports two AI paths. With hosted AI, your meal text or photo is sent to the CalTrak
+    backend and forwarded to the configured AI provider. With bring-your-own-key AI, your device
+    sends the request directly to the provider you selected using your own API key. Health data is
+    not included in AI requests.
+  </p>
+
+  <h3>Do AI features cost extra?</h3>
+  <p>
+    Hosted AI requires an active CalTrak subscription and a signed-in CalTrak account. BYOK AI uses
+    your own provider API key, and usage may be billed by that provider directly.
+  </p>
+
+  <h3>How do I sync with Apple Health or Health Connect?</h3>
+  <p>
+    Open Settings and connect the health integration. CalTrak can read and write Nutrition,
+    Hydration, and Weight records with your permission. Health data stays on your device and is not
+    sent to the CalTrak backend.
+  </p>
+
+  <h3>How do I export my diary?</h3>
+  <p>
+    Open Settings, then Data, and use the CSV export option. CalTrak creates a CSV file only when
+    you start the export, then opens the system share sheet so you can choose where it goes.
   </p>
 
   <h3>I'm seeing the wrong serving size for a food.</h3>
   <p>
-    Caltrak prefers a household serving (e.g. "1 medium" or "1 cup") when the food source
-    provides one. For barcoded packaged products that don't carry a household label, the
-    app falls back to the gram count from the label. Tap the
-    "Servings / Grams" chip in the "Add to log" sheet to switch between views.
-  </p>
-
-  <h3>How do I sync with Apple Health?</h3>
-  <p>
-    Open Settings → Integrations and tap "Connect Apple Health". Caltrak writes each food
-    entry, water log, and body-weight entry to HealthKit. Reads are filtered to Caltrak's
-    own entries so other dietary-tracking apps don't double-count your totals.
+    Public food databases vary in how they describe servings. CalTrak prefers a household serving
+    when one is available and falls back to grams when needed. You can edit entries and create
+    custom foods for items you log often.
   </p>
 
   <hr />
 
   <p class="footer">
-    <a href="/">Privacy Policy</a> &nbsp;·&nbsp; Caltrak is developed by Blaz Apps.
+    <a href="/">Privacy Policy</a> &nbsp;|&nbsp; CalTrak is developed by Blaz Apps.
   </p>
 
 </body>

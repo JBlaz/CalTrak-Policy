@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Falling Tom - Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fbfaf7;
+      --surface: #ffffff;
+      --text: #24211d;
+      --muted: #6b6258;
+      --heading: #14110f;
+      --link: #0b6b5f;
+      --link-hover: #074f47;
+      --rule: #e7e0d7;
+      --accent: #3f8ed9;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+      color: var(--text);
+      background:
+        linear-gradient(180deg, rgba(63, 142, 217, 0.08), transparent 18rem),
+        var(--bg);
+      line-height: 1.7;
+    }
+    h1 {
+      color: var(--heading);
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      line-height: 1.12;
+      margin: 0 0 0.4rem;
+      letter-spacing: 0;
+    }
+    h2 {
+      color: var(--heading);
+      font-size: 1.15rem;
+      line-height: 1.35;
+      margin-top: 2.35rem;
+      padding-top: 0.15rem;
+      border-top: 1px solid var(--rule);
+    }
+    p, li { font-size: 0.97rem; }
+    ul { padding-left: 1.35rem; }
+    li { margin: 0.35rem 0; }
+    .updated {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0 0 2.1rem;
+    }
+    a {
+      color: var(--link);
+      text-underline-offset: 0.18em;
+    }
+    a:hover { color: var(--link-hover); }
+    hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+    .footer { margin-top: 3rem; font-size: 0.85rem; color: var(--muted); }
+    strong { color: var(--heading); }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111412;
+        --surface: #171b18;
+        --text: #e9e4dc;
+        --muted: #b9afa3;
+        --heading: #fff7ed;
+        --link: #7fd7c8;
+        --link-hover: #a7eadf;
+        --rule: #343a35;
+        --accent: #68b5f0;
+      }
+      body {
+        background:
+          linear-gradient(180deg, rgba(104, 181, 240, 0.12), transparent 18rem),
+          var(--bg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Falling Tom Privacy Policy</h1>
+  <p class="updated">Effective date: July 4, 2026</p>
+
+  <p>
+    Falling Tom is an arcade game developed by Blaz Apps: you tilt your phone to steer Tom as he
+    falls. The game is private by default &mdash; there is no account, no sign-in, and no analytics.
+    Your scores, achievements, and play history stay on your device.
+  </p>
+
+  <h2>1. Data Stored On Your Device</h2>
+  <p>Falling Tom stores the following data locally, in the app's private storage:</p>
+  <ul>
+    <li>Best distance, achievements, tutorial progress, and your selected skin.</li>
+    <li>A log of finished runs: distance, duration, in-game event counts (balloons, clouds,
+        power-ups), the skin worn, a timestamp, and the run's random seed.</li>
+  </ul>
+  <p>
+    None of this identifies you, and the app never uploads it. It exists so your progress,
+    achievements, and history screens work.
+  </p>
+
+  <h2>2. Android Auto Backup</h2>
+  <p>
+    The app's saved data is included in Android's automatic backup, so your progress survives
+    reinstalling the app or moving to a new device. Backups are managed and encrypted by Android
+    and stored with your Google account; you control them in your device's backup settings.
+    Blaz Apps has no access to these backups.
+  </p>
+
+  <h2>3. Sensors and Haptics</h2>
+  <p>
+    The game reads the accelerometer in real time to steer Tom. Readings are used only for
+    control, on your device, and are not recorded or transmitted. Vibration is used for haptic
+    feedback on in-game events and involves no data.
+  </p>
+
+  <h2>4. Network Use</h2>
+  <p>
+    Once per launch, the app makes one small request to a Google server
+    (<code>www.google.com/generate_204</code>) solely to read the response's standard
+    <code>Date</code> header. This anchors run timestamps to reliable time even if the device
+    clock is set wrong. The request carries no personal or gameplay data; as with any web
+    request, the server sees routine connection details such as your IP address, governed by
+    <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. The game works
+    fully offline &mdash; without a connection, the device clock is used instead.
+  </p>
+
+  <h2>5. Advertising</h2>
+  <p>
+    Falling Tom shows ads served by Google AdMob: optional rewarded ads you choose to watch
+    (for example, to revive a run) and occasional interstitial ads between games. There are no
+    banner ads during play.
+  </p>
+  <p>
+    To serve and measure ads, Google may collect device information such as the advertising ID,
+    IP address, and ad-interaction data, as described in
+    <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and
+    <a href="https://policies.google.com/technologies/partner-sites">How Google uses information
+    from sites or apps that use our services</a>. Where required by law (for example, in the
+    EEA and UK), a consent prompt is shown before personalized ads. You can reset or delete your
+    advertising ID at any time in your device's privacy settings.
+  </p>
+
+  <h2>6. No Analytics or Tracking</h2>
+  <p>
+    Falling Tom contains no analytics SDKs and no crash-reporting services, and we do not sell
+    your data. Apart from ad serving described above, no data is shared with third parties.
+  </p>
+
+  <h2>7. Permissions Summary</h2>
+  <ul>
+    <li><strong>Internet</strong> &mdash; the once-per-launch time anchor and ad serving.</li>
+    <li><strong>Vibration</strong> &mdash; haptic feedback.</li>
+    <li><strong>Accelerometer</strong> &mdash; tilt steering (declared as required hardware).</li>
+  </ul>
+
+  <h2>8. Data Retention and Deletion</h2>
+  <p>
+    Your data stays on your device until you clear the app's data or uninstall the app. Backup
+    copies are managed by Android Auto Backup and can be removed through your device's backup
+    settings. Because Blaz Apps holds no data about you, there is nothing for us to delete on a
+    server.
+  </p>
+
+  <h2>9. Children's Privacy</h2>
+  <p>
+    Falling Tom is not directed to children under 13 or the equivalent minimum age in your
+    jurisdiction, and we do not knowingly collect data from children.
+  </p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>
+    We may update this policy from time to time. When we do, the effective date at the top of
+    this page will change. Material changes will be reflected on this page.
+  </p>
+
+  <hr />
+
+  <h2>Contact</h2>
+  <p>
+    Privacy questions:
+    <a href="mailto:privacy@blazapps.com">privacy@blazapps.com</a>
+  </p>
+  <p>
+    App help, bug reports, and feature requests:
+    <a href="mailto:support@blazapps.com">support@blazapps.com</a>
+  </p>
+
+  <p class="footer">&copy; 2026 Blaz Apps. Falling Tom.</p>
+
+</body>
+</html>
